@@ -1,5 +1,6 @@
 
 export class AppConfig {
-    static readonly widgetPath: string = "/st-widget";
-    constructor() {}
+    static readonly widgetPath: string = "/st-widgets";
+    static readonly sameTime: string ="dosam.collab.cloud";
+    constructor() { }
 }

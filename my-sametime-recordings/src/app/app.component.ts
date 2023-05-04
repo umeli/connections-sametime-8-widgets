@@ -1,10 +1,8 @@
 import { Component, OnInit, Output } from '@angular/core';
 
 import { SametimeAuthServiceService } from './services/sametime-auth-service.service';
-import { DatePipe } from '@angular/common';
-import { SametimeMeeting } from './interfaces/sametimeMeeting/sametimemeeting';
-import { SametimeUser, SametimeAuth } from './interfaces/sametimeMeeting/sametimeuser';
-
+import { SametimeAuth } from './interfaces/sametimeMeeting/sametimeuser';
+import { AppConfig } from './config/app-config';
 import { Recording } from './interfaces/sametimeMeeting/recordings';
 import { SametimeRecordingService } from './services/sametime-recording-service.service';
 
@@ -21,8 +19,9 @@ export class AppComponent implements OnInit {
   constructor(private sametime: SametimeRecordingService, private auth: SametimeAuthServiceService) {
   }
   @Output() myRecordingList: Recording[] = [];
-  @Output() meetingBase: String = "https://dosam.collab.cloud/meeting/recording";
-
+  @Output() sameTime: String = `${AppConfig.sameTime}`
+  @Output() meetingBase: String = `https://${AppConfig.sameTime}/meeting/recording`;
+  
   ngOnInit() {
 
     this.refreshAuth();

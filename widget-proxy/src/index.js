@@ -7,8 +7,15 @@ const { createProxyMiddleware } = require('http-proxy-middleware')
 const app = express();
 const PORT = 3000;
 const HOST = "localhost";
-const LOGLEVEL=process.env["DEBUG"] || "info";
+const LOGLEVEL=process.env["PROXY_DEBUG"] || "info";
+/*
+  LEVELS[LEVELS["debug"] = 10] = "debug";
+    LEVELS[LEVELS["info"] = 20] = "info";
+    LEVELS[LEVELS["warn"] = 30] = "warn";
+    LEVELS[LEVELS["error"] = 50] = "error";
+    LEVELS[LEVELS["silent"] = 80] = "silent";
 
+    */
 const SAMETIME=process.env["SAMETIME_HOST"] || "localhost";
 
 const AUTH_API_BASE_URL=`https://${SAMETIME}/sametime-auth/api/v1`;

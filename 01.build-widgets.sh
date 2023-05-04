@@ -28,9 +28,9 @@ fi
 if [ -d "$cwd/dist" ]; then
     echo "compress result"
     cd $cwd/dist
-    zip -rm SametimeWidgets-$timestamp.zip *
+    zip -rm $cwd/SametimeWidgets-$timestamp.zip *
 fi
 
-echo "done. The result should now be in $cwd/dist/SametimeWidgets-$timestamp.zip"
+echo "done. The result should now be in $cwd/SametimeWidgets-$timestamp.zip"
 
 

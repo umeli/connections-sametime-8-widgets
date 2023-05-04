@@ -1,8 +1,13 @@
 <div class="my-meetings">
+  <div *ngIf="!myRecordingList?.length">
+    <div class="meetingTitle">
+      No Recordings so far
+    </div>
+  </div>
   <div *ngFor="let meeting of myRecordingList" class="meeting-card">
 
     <div class="thumbnail">
-      <a href="https://dosam.collab.cloud/meeting/recording/{{meeting.sessionId}}" title="View Recording for {{meeting.meetingName}}" target="_blank">
+      <a href="https://{{sameTime}}/meeting/recording/{{meeting.sessionId}}" title="View Recording for {{meeting.meetingName}}" target="_blank">
         <div class="icon">
           <svg class="jss19 jss1179 svgIcon" focusable="false" viewBox="0 0 32 32" aria-hidden="true" role="presentation" data-mui-test="play--outlineIcon"><path d="M11,23a1,1,0,0,1-1-1V10a1,1,0,0,1,1.4473-.8945l12,6a1,1,0,0,1,0,1.789l-12,6A1.001,1.001,0,0,1,11,23Zm1-11.3821v8.7642L20.7642,16Z"></path><path d="M16,4A12,12,0,1,1,4,16,12,12,0,0,1,16,4m0-2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Z"></path></svg>
         </div>
@@ -10,11 +15,11 @@
     </div>
     <div class="meetingTitle">
 
-      <a href="https://dosam.collab.cloud/meeting/recording/{{meeting.sessionId}}" title="View Recording for {{meeting.meetingName}}" target="_blank">{{meeting.meetingName}}</a>
+      <a href="https://{{sameTime}}/meeting/recording/{{meeting.sessionId}}" title="View Recording for {{meeting.meetingName}}" target="_blank">{{meeting.meetingName}}</a>
       <div class="container">
         <div class="created">{{ meeting.createdAt | date:'medium'}}</div>
         <div class="downloadlink">
-          <a href="https://dosam.collab.cloud/meeting-recording/api/v1/download/{{meeting.fileId}}" title="Download meeting {{meeting.meetingName}}">
+          <a href="https://{{sameTime}}/meeting-recording/api/v1/download/{{meeting.fileId}}" title="Download meeting {{meeting.meetingName}}">
             <svg class="jss19 jss1167 svgIcon" focusable="false" viewBox="0 0 32 32" aria-hidden="true" role="presentation" data-mui-test="downloadIcon"><path d="M26 24v4H6V24H4v4H4a2 2 0 002 2H26a2 2 0 002-2h0V24zM26 14L24.59 12.59 17 20.17 17 2 15 2 15 20.17 7.41 12.59 6 14 16 24 26 14z"></path></svg>
           </a>
         </div>
