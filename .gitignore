@@ -2,12 +2,15 @@
 
 # Compiled output
 /dist
+dist/
 /tmp
 /out-tsc
 /bazel-out
 
 # Node
 /node_modules
+node_modules/
+
 npm-debug.log
 yarn-error.log
 
@@ -22,7 +25,7 @@ yarn-error.log
 
 # Visual Studio Code
 .vscode/*
-
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json

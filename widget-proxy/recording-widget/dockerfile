@@ -1,8 +1,0 @@
-
-FROM node:hydrogen-alpine 
-WORKDIR /home/node/app
-COPY package*.json .
-RUN npm install --omit-optional
-COPY ./src/* .
-EXPOSE 3000
-CMD ["node","indexrecording.js"]

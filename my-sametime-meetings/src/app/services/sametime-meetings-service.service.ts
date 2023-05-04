@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { AppConfig } from '../config/app-config';
 import { SametimeMeeting } from '../interfaces/sametimeMeeting/sametimemeeting';
 
 @Injectable({
@@ -11,9 +11,8 @@ import { SametimeMeeting } from '../interfaces/sametimeMeeting/sametimemeeting';
 export class SametimeMeetingsServiceService {
   constructor(private http: HttpClient) {
   }
-  //catalogUrl = 'https://dosam.collab.cloud/meeting-catalog/api/v1';
-  //catalogUrl = '/my-meetings/api/meeting-catalog/api/v1';
-  catalogUrl = '/my-meetings/api/stm';
+
+  catalogUrl = `${AppConfig.widgetPath}/sametime/v1/meetings`;
   getMeetings() {
     const options = {
       responseType: 'json' as const,
