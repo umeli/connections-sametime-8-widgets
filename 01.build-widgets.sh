@@ -1,11 +1,15 @@
 #!/bin/sh
 cwd=$(pwd)
-
-if [ ! -d "dist/my-meetings" ]; then
-    mkdir -p dist/my-meetings
+timestamp=$(date +%d-%m-%Y_%H-%M-%S)
+if [ ! -d "$cwd/dist" ]; then
+    mkdir $cwd/dist
 fi
-if [ ! -d "dist/my-recordings" ]; then
-    mkdir -p dist/my-recordings
+if [ -d "$cwd/dist/my-meetings" ]; then
+    
+    rm -rf $cwd/dist/my-meetings
+fi
+if [ -d "$cwd/dist/my-recordings" ]; then
+    rm -rf $cwd/dist/my-recordings    
 fi
 
 echo "compile meeting widget"
@@ -21,7 +25,12 @@ npm run build:prod
 if [ -d "$cwd/my-sametime-recordings/dist" ]; then
     mv $cwd/my-sametime-recordings/dist/* $cwd/dist/my-recordings/
 fi
+if [ -d "$cwd/dist" ]; then
+    echo "compress result"
+    cd $cwd/dist
+    zip -rm SametimeWidgets-$timestamp.zip *
+fi
 
-echo "done. The result should now be in $cwd/dist"
+echo "done. The result should now be in $cwd/dist/SametimeWidgets-$timestamp.zip"
 
 
