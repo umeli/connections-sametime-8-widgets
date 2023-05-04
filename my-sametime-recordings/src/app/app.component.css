@@ -1,0 +1,87 @@
+
+
+.meeting-card{
+    padding:5px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    margin-top:5px;
+    background-color: #F2F4F5;
+    margin-bottom: 5px;
+    height: 40px;
+    font-family: Helvetica Neue, Arial, sans-serif;
+    font-weight: 700;
+}
+.meeting-card a:active {
+    color: #01539B;
+    text-decoration:none;
+}
+.meeting-card a {
+    color: #01539B;
+    text-decoration:none;
+}
+
+.meeting-card a:hover {
+    color: #01539B;
+    text-decoration: none;
+}
+body{
+    margin:0px !important;
+}
+.meeting-card .meetingIcon {
+    float:left;
+}
+.meeting-card .meetingIcon .jss229{
+    color: #3D5466;
+    padding: 0px 8px 0px 8px;
+    align-self: center;
+    margin-top: 0px;
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    font-size: 10px;
+}
+.meeting-card .thumbnail {
+    width: 25px;
+    float: left;
+}
+.meeting-card .thumbnail .icon {
+    height: 22px;
+    
+    display: flex;
+    position: relative;
+    min-width: 22px;
+    align-items: center;
+    border-radius: 2px;
+    justify-content: center;
+    background-color: #1C262E;
+}
+
+.meeting-card .thumbnail .svgIcon {
+height: 15px;
+fill: white;
+
+}
+.meeting-card .container .created{
+    font-size:80%;
+    font-weight: normal;
+}
+.meeting-card .container .downloadlink{
+    float:left;
+    margin-right: 5px;
+}
+.meeting-card .container .size {
+    float:left;
+    font-weight: normal;
+    font-size: 80%;
+}
+
+.meeting-card .meetingTitle {
+    margin-left: 10px;
+    float: left;
+    font-size: .875rem;
+}
+.meeting-card .meetingTitle .svgIcon{
+    width: 12px;
+    height: 12px;
+}

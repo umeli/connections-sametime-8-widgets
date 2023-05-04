@@ -1,0 +1,28 @@
+version: '3.9'
+
+services:
+  sametime-widget-proxy:
+    image: "sametime-widget-proxy:latest"
+    container_name: sametime-widget-proxy
+    restart: always
+    user: 1001:1001
+    build: ./widget-proxy
+    environment:
+      DEBUG: "express:*"
+    expose:
+      - "3000"
+    ports:
+      - "3001:3000"
+
+  sametime-recording-proxy:
+    image: "sametime-recording-proxy:latest"
+    container_name: sametime-recording-proxy
+    restart: always
+    user: 1001:1001
+    build: ./recording-widget      
+    environment:
+      DEBUG: "express:*"
+    expose:
+      - "3000"
+    ports:
+      - "3002:3000"

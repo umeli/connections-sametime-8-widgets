@@ -1,0 +1,25 @@
+{
+  "name": "recording-proxy",
+  "version": "1.0.0",
+  "description": "Common proxy for sametime recording widgets",
+  "main": "indexrecording.js",
+  "scripts": {    
+    "start":"node src/indexrecording.js"
+
+  },
+  "repository": {
+    
+  },
+  "keywords": [
+    "proxy"
+  ],
+  "author": "UMI",
+  "license": "ISC",
+  "devDependencies": {
+    
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "http-proxy-middleware": "^2.0.6"
+  }
+}
