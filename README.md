@@ -1,6 +1,8 @@
 # Sample Sametime Widgets for Connections - Engage 2023
 
-Just a small sample widget, which shows your Sametime meetings in Connections. The Widget can be used in the Community Highlights or the Engagement Center.
+The following samples have been created for the [Engage 2023](https://engage.ug/Engage2.nsf/Pages/session2023) session 'AD02 - Your HCL Digital Office in the browser'
+
+Just 2 small sample widgets, which shows your Sametime meetings and Recordings in Connections. The Widgets can be used in the Community Highlights or the Engagement Center.
 
 ![screenshot](assets/Selection_054.png)
 
@@ -80,6 +82,7 @@ If you don't have any recorded meetings it will show this:
 
 Of course the Angular components could also be deployed as a docker container.
 Just for the sake of simplicity I decided to put them into the htdocs folder.
+And it might be usefull to add pagination to the widget.
 
 ## Disclaimer
 
