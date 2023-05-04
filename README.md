@@ -13,15 +13,15 @@ It's a simple HTML widget
 
 In this small example we use the following servers:
 
-- [https://digitaloffice.collab.cloud] is the main Connections 8 Server.
+- 'digitaloffice.collab.cloud' is the main Connections 8 Server.
 
-- [https://dosam.collab.cloud] is the Sametime 12 Server
+- 'dosam.collab.cloud' is the Sametime 12 Server
 
 SSO is already configured between both servers.
 
 ## Requirements
 
-You need a working node.js/npm environment to build the widgets and docker with the compose plugin for the API proxy.
+You need a working node.js/npm environment to build the angular widgets and docker with the compose plugin for the API proxy.
 
 ## Architecture
 
@@ -72,3 +72,15 @@ Once you're logged in, you'll get the JSON back.
 
 and the widget itself can be opened directly
 ![client widget](assets/Selection_057.png)
+
+If you don't have any recorded meetings it will show this:
+![No recordings](assets/Selection_058.png)
+
+## Possible improvements
+
+Of course the Angular components could also be deployed as a docker container.
+Just for the sake of simplicity I decided to put them into the htdocs folder.
+
+## Disclaimer
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
