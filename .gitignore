@@ -46,3 +46,4 @@ testem.log
 .DS_Store
 Thumbs.db
 SametimeWidgets-*.zip
+**/package-lock.json

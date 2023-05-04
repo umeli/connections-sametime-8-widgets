@@ -14,6 +14,7 @@ fi
 
 echo "compile meeting widget"
 cd $cwd/my-sametime-meetings
+npm install
 npm run build:prod
 if [ -d "$cwd/my-sametime-meetings/dist" ]; then
     echo "Move compiled files"
@@ -21,6 +22,7 @@ if [ -d "$cwd/my-sametime-meetings/dist" ]; then
 fi 
 echo "compile recording widget"
 cd $cwd/my-sametime-recordings
+npm install
 npm run build:prod
 if [ -d "$cwd/my-sametime-recordings/dist" ]; then
     mv $cwd/my-sametime-recordings/dist/* $cwd/dist/my-recordings/
